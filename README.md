@@ -1,5 +1,15 @@
 # Project for the CI/CD Process Security course
 
+## Project Links
+
+- GitHub repository: [SiKret100/HelpDeskFlow](https://github.com/SiKret100/HelpDeskFlow)
+- Docker Hub - frontend: [dawidrut01/helpdeskflow-frontend](https://hub.docker.com/r/dawidrut01/helpdeskflow-frontend)
+- Docker Hub - API Gateway: [dawidrut01/helpdeskflow-api-gateway](https://hub.docker.com/r/dawidrut01/helpdeskflow-api-gateway)
+- Docker Hub - Auth Service: [dawidrut01/helpdeskflow-auth-service](https://hub.docker.com/r/dawidrut01/helpdeskflow-auth-service)
+- Docker Hub - User Service: [dawidrut01/helpdeskflow-user-service](https://hub.docker.com/r/dawidrut01/helpdeskflow-user-service)
+- Docker Hub - Ticket Service: [dawidrut01/helpdeskflow-ticket-service](https://hub.docker.com/r/dawidrut01/helpdeskflow-ticket-service)
+- Docker Hub - Notification Service: [dawidrut01/helpdeskflow-notification-service](https://hub.docker.com/r/dawidrut01/helpdeskflow-notification-service)
+
 ## Overview
 
 ![Project architecture](./image_doc/scheme.png)
@@ -95,8 +105,8 @@ To get started with the project, follow the steps below:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/<your-account>/<your-repository>.git
-   cd <your-repository>
+   git clone https://github.com/SiKret100/HelpDeskFlow.git
+   cd HelpDeskFlow
    ```
 
 2. Create the required environment files:
