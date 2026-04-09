@@ -1,6 +1,9 @@
 services:
   db:
-    image: postgres:17-alpine3.22
+    build:
+      context: .
+      dockerfile: infra/db/Dockerfile
+    image: helpdeskflow-db:local
     container_name: helpdeskflow-db
     restart: unless-stopped
     ports:
