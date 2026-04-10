@@ -27,7 +27,7 @@ The application is containerized with Docker Compose and uses a shared PostgreSQ
 - [Auth Service](./services/auth-service): Registers users, verifies credentials, issues JWT tokens, and seeds default `admin` and `support` accounts.
 - [User Service](./services/user-service): Returns the current user profile and exposes the list of support representatives.
 - [Ticket Service](./services/ticket-service): Handles support cases, comments, assignee changes, status changes, and case history.
-- [Notification Service](./services/notification-service): Sends status change emails through Gmail SMTP or works in simulation mode if SMTP is not configured.
+- [Notification Service](./services/notification-service): Sends status change emails through Gmail SMTP or works in simulation mode if SMTP is not configured. The current SMTP integration is a temporary solution for this stage of the project and is not the final version of the notification connection.
 - **Database (PostgreSQL)**: Shared SQL database storing `users`, `cases`, `case_comments`, `case_history`, and `notifications`.
 - [Database Image](./infra/db/Dockerfile): Local hardened Postgres image used by Docker Compose; it keeps the official init flow and replaces the vulnerable `gosu` helper with `su-exec`.
 - **Gmail SMTP**: External mail provider used by the Notification Service for real email delivery.
@@ -125,6 +125,7 @@ To get started with the project, follow the steps below:
    ```
 
    If SMTP is not configured, `notification-service` will still work in simulation mode and will save delivery events in the `notifications` table.
+   The current SMTP connection is not the final version and will be further integrated and refined in the next part of the project.
 
 4. Install dependencies:
 
